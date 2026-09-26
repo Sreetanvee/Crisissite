@@ -1,0 +1,46 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-ink-950 text-slate-200 font-display antialiased;
+  background-image:
+    radial-gradient(1200px 600px at 90% -10%, rgba(63, 143, 138, 0.08), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(196, 85, 58, 0.06), transparent 55%);
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0e131b; }
+::-webkit-scrollbar-thumb { background: #2c3a4d; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #3d4f68; }
+
+.leaflet-container {
+  background: #0e131b !important;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #171f2c;
+  color: #e2e8f0;
+  border: 1px solid #2c3a4d;
+  border-radius: 8px;
+}
+.leaflet-popup-tip { background: #171f2c; }
+.leaflet-popup-content { margin: 12px 14px; font-size: 13px; }
+
+.mono { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+.focus-ring:focus-visible {
+  outline: 2px solid #e0a63c;
+  outline-offset: 2px;
+}
